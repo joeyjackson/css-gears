@@ -1,0 +1,60 @@
+
+
+body {
+    background: #03b1fc;
+}
+
+.parent {
+    display: flex;
+}
+
+.spin-clockwise {
+    animation-name: spin-clockwise;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.spin-counterclockwise {
+    animation-name: spin-counterclockwise;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.gear-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.gear-2 {
+    position: absolute;
+    top: 0px;
+    left: 330px;
+}
+
+.gear-3 {
+    position: absolute;
+    top: 330px;
+    left: 330px;
+}
+
+@keyframes spin-clockwise {
+    from {
+        transform: rotate(15deg);
+    }
+    to {
+        transform: rotate(375deg);
+    }
+}
+
+@keyframes spin-counterclockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
