@@ -1,51 +1,80 @@
-
+:root {
+    --scale: 15;
+    --speed: 10;
+    --top-margin: 10px;
+    --left-margin: 10px;
+}
 
 body {
     background: #03b1fc;
 }
 
-.parent {
-    display: flex;
-}
-
 .spin-clockwise {
     animation-name: spin-clockwise;
-    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
 .spin-counterclockwise {
     animation-name: spin-counterclockwise;
-    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
-.gear-1 {
+.parent img {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-.gear-2 {
-    position: absolute;
-    top: 0px;
-    left: 330px;
+#gear-1 {
+    width: calc(1px * var(--scale) * 8);
+    animation-duration: calc(1s / var(--speed) * 40);
+    top: calc(var(--scale) * 2px + var(--top-margin));
+    left: calc(var(--scale) * 16.6px + var(--left-margin));
 }
 
-.gear-3 {
-    position: absolute;
-    top: 330px;
-    left: 330px;
+#gear-2 {
+    width: calc(1px * var(--scale) * 12);
+    animation-duration: calc(1s / var(--speed) * 60);
+    top: calc(var(--scale) * 0px  + var(--top-margin));
+    left: calc(var(--scale) * 6px + var(--left-margin));
+}
+
+#gear-3 {
+    width: calc(1px * var(--scale) * 24);
+    animation-duration: calc(1s / var(--speed) * 120);
+    top: calc(var(--scale) * 10.4px + var(--top-margin));
+    left: calc(var(--scale) * 0px + var(--left-margin));
+}
+
+#gear-4 {
+    width: calc(1px * var(--scale) * 6);
+    animation-duration: calc(1s / var(--speed) * 120);
+    top: calc(var(--scale) * 19.734px + var(--top-margin));
+    left: calc(var(--scale) * 9px + var(--left-margin));
+}
+
+#gear-5 {
+    height: calc(1px * var(--scale) * 6);
+    animation-duration: calc(1s / var(--speed) * 120);
+    top: calc(var(--scale) * 19.396px + var(--top-margin));
+    left: calc(var(--scale) * 13.8px + var(--left-margin));
+}
+
+#gear-6 {
+    width: calc(1px * var(--scale) * 6);
+    animation-duration: calc(1s / var(--speed) * 120);
+    top: calc(var(--scale) * 19.734px + var(--top-margin));
+    left: calc(var(--scale) * 18px + var(--left-margin));
 }
 
 @keyframes spin-clockwise {
     from {
-        transform: rotate(15deg);
+        transform: rotate(0deg);
     }
     to {
-        transform: rotate(375deg);
+        transform: rotate(360deg);
     }
 }
 
